@@ -7,7 +7,7 @@ return {
   --     flavour = "mocha", -- latte, frappe, macchiato, mocha
   --     color_overrides = {
   --       mocha = {
-  --         base = "#181825",
+  --         base = "#181825"
   --         mantle = "#1e1e2e",
   --       },
   --     },
@@ -22,12 +22,16 @@ return {
   -- },
   {
     "ellisonleao/gruvbox.nvim",
-    priority = 1000,
+    -- priority = 1000,
     init = function()
       -- adding additional highlights
       local hl = vim.api.nvim_set_hl -- set modicator hls with catppuccin colors
 
-      hl(0, "NotifyBackground", { fg = "#282828" })
+      hl(0, "FloatShadow", { bg = "#282828" })
+      hl(0, "FloatShadowThrough", { bg = "#282828" })
+      hl(0, "NormalFloat", { fg = "#ebdbb2", bg = "#282828" })
+      hl(0, "Normal", { fg = "#ebdbb2", bg = "#282828" })
+      hl(0, "MsgArea", { fg = "#ebdbb2", bg = "#282828" })
     end,
     opts = {
       transparent_mode = true,

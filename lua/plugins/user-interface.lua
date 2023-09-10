@@ -117,7 +117,7 @@ return {
         max_height = 0,
         border = "single",
         win_options = {
-          winblend = 10,
+          winblend = 0,
         },
         -- This is the config that will be passed to nvim_open_win.
         -- Change values here to customize the layout
@@ -165,6 +165,13 @@ return {
     },
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+
+  { -- added option to add nvim notiffy background color to existing lazyvim spec
+    "rcarriga/nvim-notify",
+    opts = {
+      background_colour = "#282828",
+    },
   },
 
   -- { -- needs a newer version of neovim unfortunately

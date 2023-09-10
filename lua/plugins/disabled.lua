@@ -4,4 +4,8 @@ return {
     event = "VeryLazy",
     enabled = false,
   },
+  { -- remove nvim-navic since lualine is too crowded
+    "SmiteshP/nvim-navic",
+    enabled = false,
+  },
 }
