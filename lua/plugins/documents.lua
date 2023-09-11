@@ -107,18 +107,7 @@ return {
       -- hl(0, "@neorg.links.file", { fg = theme.lavender })
       -- }}}
 
-      local hl = vim.api.nvim_set_hl
-
       -- headlines
-      hl(0, "Headline", { bold = true, bg = "#ebdbb2" })
-      hl(0, "HeadlinePlain", { bold = true, bg = "#ebdbb2" })
-      hl(0, "Headline1", { bold = true, fg = "#fabd2f", bg = "#3c3836" })
-      hl(0, "Headline2", { bold = true, fg = "#83a598", bg = "#3c3836" })
-      hl(0, "Headline3", { bold = true, fg = "#b8bb26", bg = "#323836" })
-      hl(0, "Headline4", { bold = true, fg = "#fabd2f" })
-      hl(0, "Headline5", { bold = true, fg = "#83a598" })
-      hl(0, "Headline6", { bold = true, fg = "#8ec07c" })
-
       require("headlines").setup({
         markdown = {
           headline_highlights = {
@@ -134,7 +123,7 @@ return {
           dash_string = "-",
           quote_highlight = "Quote",
           quote_string = "┃",
-          fat_headlines = true,
+          fat_headlines = false,
           -- fat_headline_upper_string = "▃",
           -- fat_headline_lower_string = "🬂",
           fat_headline_upper_string = "",

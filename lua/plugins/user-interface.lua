@@ -1,13 +1,20 @@
 return {
-  {
-    "stevearc/aerial.nvim",
-    opts = {},
-    -- Optional dependencies
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
-  },
+  -- {
+  --   "stevearc/aerial.nvim",
+  --   opts = {},
+  --   -- Optional dependencies
+  --   dependencies = {
+  --     "nvim-treesitter/nvim-treesitter",
+  --     "nvim-tree/nvim-web-devicons",
+  --   },
+  -- },
+  -- {
+  --   "nvim-lualine/lualine.nvim",
+  --   event = "VeryLazy",
+  --   opts = {
+  --     options = { theme = "gruvbox" },
+  --   },
+  -- },
 
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -172,6 +179,10 @@ return {
     opts = {
       background_colour = "#282828",
     },
+  },
+
+  {
+
   },
 
   -- { -- needs a newer version of neovim unfortunately

@@ -26,19 +26,6 @@ return {
       -- hl(0, "CursorLineNr", { fg = mocha.blue })
       -- }}}
 
-      local hl = vim.api.nvim_set_hl -- set modicator hls with catppuccin colors
-
-      hl(0, "NormalMode", { fg = "#A89984" })
-      hl(0, "InsertMode", { fg = "#83A898" })
-      hl(0, "VisualMode", { fg = "#fE8019" })
-      hl(0, "CommandMode", { fg = "#B8BB26" })
-      hl(0, "ReplaceMode", { fg = "#fb4934" })
-      hl(0, "SelectMode", { fg = "#A89984" })
-      hl(0, "TerminalMode", { fg = "#A89984" })
-      hl(0, "TerminalNormalMode", { fg = "#A89984" })
-
-      -- and defualt number for current line
-      hl(0, "CursorLineNr", { fg = "#A89984" })
     end,
     config = function()
       require("modicator").setup()
@@ -47,14 +34,36 @@ return {
 
   { -- making delimiters easier to distinguish
     "HiPhish/rainbow-delimiters.nvim",
-    -- extra configuration here if needed
+    config = function ()
+      local rainbow_delimiters = require('rainbow-delimiters')
+
+      vim.g.rainbow_delimiters = {
+        strategy = {
+          [''] = rainbow_delimiters.strategy['global'],
+          commonlisp = rainbow_delimiters.strategy['local'],
+        },
+        query = {
+          [''] = 'rainbow-delimiters',
+          lua = 'rainbow-blocks',
+        },
+        highlight = {
+          'RainbowDelimiterOrange',
+          'RainbowDelimiterBlue',
+          'RainbowDelimiterYellow',
+          'RainbowDelimiterCyan',
+          'RainbowDelimiterViolet',
+        },
+      }
+    end,
   },
 
-  { -- hightlight color values
+  { -- highlight color values
     "NvChad/nvim-colorizer.lua",
-    -- opts = {
-    --
-    -- },
+    opts = {
+      user_default_options = {
+        names = false,
+      },
+    },
     config = function(_, opts)
       require("colorizer").setup(opts)
     end,

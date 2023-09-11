@@ -8,4 +8,9 @@ return {
     "SmiteshP/nvim-navic",
     enabled = false,
   },
+
+  {
+    "folke/neodev.nvim",
+    enabled = false,
+  },
 }
