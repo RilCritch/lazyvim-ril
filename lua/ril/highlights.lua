@@ -103,3 +103,8 @@ hl(0, "Todo", { fg = theme.blue1, bg = theme.bg1, bold = true })
 ----------------------------- Noice
 hl(0, "NoiceMini", { bg = theme.bg2 })
 
+----------------------------- Vim Illuminate
+hl(0, "IlluminatedWordText",  { bold = true, bg = theme.bg2 })
+hl(0, "IlluminatedWordRead",  { bold = true, fg = theme.cyan1, bg = theme.bg2 })
+hl(0, "IlluminatedWordWrite", { bold = true, fg = theme.yellow1, bg = theme.bg2 })
+

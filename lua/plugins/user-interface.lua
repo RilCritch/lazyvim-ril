@@ -61,7 +61,7 @@ return {
       win_options = {
         wrap = false,
         signcolumn = "no",
-        cursorcolumn = true,
+        cursorcolumn = false,
         foldcolumn = "0",
         spell = false,
         list = false,
@@ -122,7 +122,7 @@ return {
         margin = 20,
         max_width = 0,
         max_height = 0,
-        border = "single",
+        border = "rounded",
         win_options = {
           winblend = 0,
         },
