@@ -100,6 +100,6 @@ hl(0, "Headline6",     { bold = true, fg = theme.fg1 })
 ----------------------------- Todo
 hl(0, "Todo", { fg = theme.blue1, bg = theme.bg1, bold = true })
 
------------------------------ Floating Stuff
-hl(0, "MsgArea", { bg = theme.bg1 })
+----------------------------- Noice
+hl(0, "NoiceMini", { bg = theme.bg2 })
 
