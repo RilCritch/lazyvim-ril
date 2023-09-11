@@ -9,42 +9,6 @@ return {
   },
 
   {
-    "nvim-neorg/neorg",
-    build = ":Neorg sync-parsers",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("neorg").setup({
-        load = {
-          ["core.defaults"] = {}, -- Loads default behaviour
-          ["core.concealer"] = {
-            config = {
-              icons = {
-                heading = {
-                  icons = {
-                    "󰗝 ", -- H1
-                    "󰪥 ", -- H2
-                    "󰻂 ", -- H3
-                    "󰺕 ", -- H4
-                    "󰻃 ", -- H5
-                    "󰝦 ", -- H6
-                  },
-                },
-              },
-            },
-          }, -- Adds pretty icons to your documents
-          ["core.dirman"] = { -- Manages Neorg workspaces
-            config = {
-              workspaces = {
-                notes = "~/documents/notes",
-              },
-            },
-          },
-        },
-      })
-    end,
-  },
-
-  {
     "lukas-reineke/headlines.nvim",
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = function()
@@ -107,7 +71,6 @@ return {
       -- hl(0, "@neorg.links.file", { fg = theme.lavender })
       -- }}}
 
-      -- headlines
       require("headlines").setup({
         markdown = {
           headline_highlights = {
@@ -129,26 +92,44 @@ return {
           fat_headline_upper_string = "",
           fat_headline_lower_string = "-",
         },
-        norg = {
-          headline_highlights = {
-            "Headline",
-            "Headline",
-            "HeadlinePlane",
-          },
-          codeblock_highlight = "CodeBlock",
-          dash_highlight = "Dash",
-          dash_string = "",
-          doubledash_highlight = "DoubleDash",
-          doubledash_string = "",
-          quote_highlight = "Quote",
-          quote_string = "┃",
-          fat_headlines = false,
-          fat_headline_upper_string = "",
-          fat_headline_lower_string = "",
-          -- fat_headline_upper_string = "▃",
-          -- fat_headline_lower_string = "🬂",
-        },
       })
     end,
   },
+
+  -- {
+  --   "nvim-neorg/neorg",
+  --   build = ":Neorg sync-parsers",
+  --   dependencies = { "nvim-lua/plenary.nvim" },
+  --   config = function()
+  --     require("neorg").setup({
+  --       load = {
+  --         ["core.defaults"] = {}, -- Loads default behaviour
+  --         ["core.concealer"] = {
+  --           config = {
+  --             icons = {
+  --               heading = {
+  --                 icons = {
+  --                   "󰗝 ", -- H1
+  --                   "󰪥 ", -- H2
+  --                   "󰻂 ", -- H3
+  --                   "󰺕 ", -- H4
+  --                   "󰻃 ", -- H5
+  --                   "󰝦 ", -- H6
+  --                 },
+  --               },
+  --             },
+  --           },
+  --         }, -- Adds pretty icons to your documents
+  --         ["core.dirman"] = { -- Manages Neorg workspaces
+  --           config = {
+  --             workspaces = {
+  --               notes = "~/documents/notes",
+  --             },
+  --           },
+  --         },
+  --       },
+  --     })
+  --   end,
+  -- },
+
 }

@@ -1,21 +1,4 @@
 return {
-  -- {
-  --   "stevearc/aerial.nvim",
-  --   opts = {},
-  --   -- Optional dependencies
-  --   dependencies = {
-  --     "nvim-treesitter/nvim-treesitter",
-  --     "nvim-tree/nvim-web-devicons",
-  --   },
-  -- },
-  -- {
-  --   "nvim-lualine/lualine.nvim",
-  --   event = "VeryLazy",
-  --   opts = {
-  --     options = { theme = "gruvbox" },
-  --   },
-  -- },
-
   {
     "nvim-neo-tree/neo-tree.nvim",
     init = function() end, -- disabling neo-tree when nvim is called on directories
