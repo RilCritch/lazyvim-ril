@@ -108,14 +108,5 @@ hl(0, "IlluminatedWordText",  { bold = true, bg = theme.bg2 })
 hl(0, "IlluminatedWordRead",  { bold = true, fg = theme.cyan1, bg = theme.bg2 })
 hl(0, "IlluminatedWordWrite", { bold = true, fg = theme.yellow1, bg = theme.bg2 })
 
------------------------------ nvim web dev icons (add as needed) - eventually seperate into other file and do all icons 
-hl(0, "DevIconLua",          { fg = theme.blue1 })
-hl(0, "DevIconPy",           { fg = theme.blue1 })
-hl(0, "DevIconBash",         { fg = theme.cyan1 })
-hl(0, "DevIconBashrc",       { fg = theme.cyan1 })
-hl(0, "DevIconBashProfile",  { fg = theme.cyan1 })
-hl(0, "DevIconC",            { fg = theme.red1 })
-hl(0, "DevIconH",            { fg = theme.purple1 })
-hl(0, "DevIconMarkdown",     { fg = theme.fg1 })
-hl(0, "DevIconMd",           { fg = theme.fg1 })
-hl(0, "DevIconConf",         { fg = theme.yellow1 })
+----------------------------- nvim-web-devicons
+require("ril.coloring.nvim-web-devicons-color.easy-color-devicons")
