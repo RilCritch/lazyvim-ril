@@ -123,7 +123,7 @@ return {
   --         ["core.dirman"] = { -- Manages Neorg workspaces
   --           config = {
   --             workspaces = {
-  --               notes = "~/documents/notes",
+  --               notes = "~/Documents/notes",
   --             },
   --           },
   --         },
