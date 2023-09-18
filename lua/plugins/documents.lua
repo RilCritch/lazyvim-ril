@@ -8,7 +8,7 @@ return {
     "jghauser/follow-md-links.nvim",
   },
 
-  {
+  { -- make markdown look better
     "lukas-reineke/headlines.nvim",
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = function()
@@ -73,7 +73,7 @@ return {
 
       require("headlines").setup({
         markdown = {
-          headline_highlights = {
+          headline_highlights = { -- hightlights defined in ril.highlights
             "Headline1",
             "Headline2",
             "Headline3",
