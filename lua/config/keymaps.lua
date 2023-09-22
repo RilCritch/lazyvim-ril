@@ -41,8 +41,7 @@ map("n", "<leader>wo", "<C-W>o", { desc = "Close all other windows", remap = tru
 map("n", "<leader>mc", "<cmd>MdEval<cr>", { desc = "Run code block", silent = true, noremap = true })
 map("n", "<leader>nn", "<cmd>Neorg workspace notes<cr>", { desc = "Notes", silent = true, noremap = true })
 
--- user interface
-map("n", "<leader>cv", "<cmd>AerialToggle<cr>", { desc = "Toggle aerial", silent = true, noremap = true }) -- code overview
+-- oil file manager
 map("n", "<leader>e", function() -- toggle oil
   require("oil").toggle_float(nil)
 end, { desc = "Toggle oil", silent = true })
