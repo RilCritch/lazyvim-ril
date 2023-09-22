@@ -15,7 +15,7 @@ opt.conceallevel = 3 -- Hide * markup for bold and italic
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Enable highlighting of the current line
 opt.expandtab = true -- Use spaces instead of tabs
-opt.foldlevelstart = 0
+opt.foldlevelstart = 99 -- level at which vim will fold when opening buffers
 opt.formatoptions = "jcroqlnt" -- tcqj
 opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
@@ -58,10 +58,13 @@ if vim.fn.has("nvim-0.9.0") == 1 then
   opt.shortmess:append({ C = true })
 end
 
--- Fix markdown indentation settings
-vim.g.markdown_recommended_style = 0
+-- Markdown settings
+vim.g.markdown_folding = 1
+vim.g.markdown_recommended_style = 4
 
--- This for some reason doesn't work. Where is NormalFloat getting set?
+-- This for some reason doesn't work. Where is NormalFloat getting set? 
+-- ** This doesn't work because its too early in the loading proccess... moved hightlihgts to be set after
+-- ** lazy.nvim is completely done so I can override any plugin defaults I dont like in the main init.lua using the highlights.lua file
 -- local mocha = require("catppuccin.palettes").get_palette("mocha") -- retrieving catppuccin colors
 -- local hl = vim.api.nvim_set_hl
 --

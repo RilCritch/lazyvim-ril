@@ -100,6 +100,11 @@ hl(0, "Headline6",     { bold = true, fg = theme.fg1 })
 ----------------------------- Todo
 hl(0, "Todo", { fg = theme.blue1, bg = theme.bg1, bold = true })
 
+----------------------------- Todo
+hl(0, "@text.strong.markdown_inline", { fg = theme.fg0, bold = true })
+hl(0, "@text.reference.markdown_inline", { fg = theme.cyan1, underline = true })
+-- hl(0, "@text.emphasis.markdown", { fg = theme.blue1, italic = true })
+
 ----------------------------- Noice
 hl(0, "NoiceMini", { bg = theme.bg2 })
 
