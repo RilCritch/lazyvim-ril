@@ -89,6 +89,9 @@ hl(0, "SelectMode",         { fg = theme.fg2 })
 hl(0, "TerminalMode",       { fg = theme.fg2 })
 hl(0, "TerminalNormalMode", { fg = theme.fg2 })
 
+----------------------------- Nvim
+hl(0, "CursorLine", { bg = theme.bg1 })
+
 ----------------------------- Lualine
 local lualine_theme = require('ril.lauline.gruvbox_ril')
 require('lualine').setup {
@@ -104,24 +107,27 @@ hl(0, "RainbowDelimiterViolet", { fg = theme.purple1 })
 
 ----------------------------- Headlines
 hl(0, "Dash",          { fg = theme.bg3 })
+hl(0, "Quote",         { bold = true, fg = theme.gray_0, bg = theme.gray_0 })
 hl(0, "HeadlinePlain", { bold = true, fg = theme.fg })
 hl(0, "Headline",      { bold = true, fg = theme.fg, bg = theme.bg3 })
-hl(0, "Headline1",     { bold = true, fg = theme.fg, bg = theme.blueB })
-hl(0, "Headline2",     { bold = true, fg = theme.purple1, bg = theme.bg2 })
+hl(0, "Headline1",     { bold = true, fg = theme.fg_0, bg = theme.blueB })
+hl(0, "Headline2",     { bold = true, fg = theme.cyan1, bg = theme.bg2 })
 hl(0, "Headline3",     { bold = true, fg = theme.blue1, bg = theme.bg1 })
-hl(0, "Headline4",     { bold = true, fg = theme.fg })
-hl(0, "Headline5",     { bold = false, fg = theme.fg })
-hl(0, "Headline6",     { bold = false, fg = theme.fg1 })
+hl(0, "Headline4",     { bold = true, fg = theme.purple1 })
+hl(0, "Headline5",     { bold = true, fg = theme.cyan1 })
+hl(0, "Headline6",     { bold = true, fg = theme.blue1 })
 
 ----------------------------- Todo
-hl(0, "Todo", { fg = theme.blue1, bg = theme.bg1, bold = true })
+hl(0, "Todo", { fg = theme.bg0, bg = theme.blue1, bold = true })
 
------------------------------ Todo
+----------------------------- Markdown
+hl(0, "@text.title.markdown", { fg = theme.purple1, bold = true }) -- table title
 hl(0, "@text.strong.markdown_inline", { fg = theme.fg_0, bold = true }) -- bold
-hl(0, "@text.reference.markdown_inline", { fg = theme.cyan1, underline = true }) -- link
 hl(0, "@text.emphasis.markdown_inline", { fg = theme.fg0, italic = true }) -- italic
+hl(0, "@text.reference.markdown_inline", { fg = theme.cyan1, underline = true }) -- link
 hl(0, "@punctuation.delimiter.markdown_inline", { fg = theme.yellow1 }) -- delimiters
-hl(0, "@punctuation.special.markdown", { fg = theme.purple1, bold = true }) -- list chars
+hl(0, "@punctuation.bracket.markdown_inline", { fg = theme.yellow1 }) -- brackets
+hl(0, "@punctuation.special.markdown", { fg = theme.blue1, bold = true }) -- list chars, table borders, HR
 
 ----------------------------- Noice
 hl(0, "NoiceMini", { bg = theme.bg3 })

@@ -83,7 +83,7 @@ return {
           },
           codeblock_highlight = "CodeBlock",
           dash_highlight = "Dash",
-          dash_string = "-",
+          dash_string = "",
           quote_highlight = "Quote",
           quote_string = "┃",
           fat_headlines = false,
