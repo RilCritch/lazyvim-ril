@@ -4,6 +4,7 @@ return {
     opts = {
       filetypes_denylist = {
         "oil",
+        "markdown"
       },
     },
   },
