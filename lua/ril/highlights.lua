@@ -28,46 +28,53 @@ local gruvbox = {
   gray1   = "#A89984", -- gray light
 
   ---------- Red
-  redB    = "#66191c", -- red bg
+  redB    = "#66191C", -- red bg
   red0    = "#9D0006", -- red dark
   red     = "#CC241D", -- red main
   red1    = "#FB4934", -- red light
+  redL    = "#EF998F", -- red ultra light
 
   ---------- Green
-  greenB  = "#56542e", -- green bg
+  greenB  = "#56542E", -- green bg
   green0  = "#79740E", -- green dark
   green   = "#98971A", -- green main
   green1  = "#B8BB26", -- green light
+  greenL  = "#D5D775", -- green ultra light
 
   ---------- Yellow
   yellowB = "#775622", -- yellow bg
   yellow0 = "#B57614", -- yellow dark
   yellow  = "#D79921", -- yellow main
   yellow1 = "#FABD2F", -- yellow light
+  yellowL = "#F2D48C", -- yellow ultra light
 
   ---------- Blue
-  blueB   = "#33484d", -- blue bg
+  blueB   = "#33484D", -- blue bg
   blue0   = "#076678", -- blue dark
   blue    = "#458588", -- blue main
   blue1   = "#83A598", -- blue light
+  blueL   = "#B5C9C2", -- blue ultra light
 
   ---------- Purple
-  purpleB = "#5c3d50", -- purple bg
+  purpleB = "#5C3D50", -- purple bg
   purple0 = "#8F3F71", -- purple dark
   purple  = "#B16286", -- purple main
   purple1 = "#D3869B", -- purple light
+  purpleL = "#dbbdc5", -- purple ultra light
 
   ---------- Cyan
-  cyanB   = "#2d533c", -- cyan bg
+  cyanB   = "#2D533C", -- cyan bg
   cyan0   = "#427B58", -- cyan dark
   cyan    = "#689D6A", -- cyan main
   cyan1   = "#8EC07C", -- cyan light
+  cyanL   = "#c5dbbd", -- cyan ultra light
 
   ---------- Orange
-  orangeB = "#702e10", -- orange bg
+  orangeB = "#702E10", -- orange bg
   orange0 = "#AF3A03", -- orange dark
   orange  = "#D65D0E", -- orange main
   orange1 = "#FE8019", -- orange light
+  orangeL = "#f6ba88", -- orange ultra light
 }
 -- }}}
 
@@ -122,8 +129,8 @@ hl(0, "Todo", { fg = theme.bg0, bg = theme.blue1, bold = true })
 
 ----------------------------- Markdown
 hl(0, "@text.title.markdown", { fg = theme.purple1, bold = true }) -- table title
-hl(0, "@text.strong.markdown_inline", { fg = theme.fg_0, bold = true }) -- bold
-hl(0, "@text.emphasis.markdown_inline", { fg = theme.fg0, italic = true }) -- italic
+hl(0, "@text.strong.markdown_inline", { fg = theme.purpleL, bold = true }) -- bold
+hl(0, "@text.emphasis.markdown_inline", { fg = theme.cyanL, italic = true }) -- italic
 hl(0, "@text.reference.markdown_inline", { fg = theme.cyan1, underline = true }) -- link
 hl(0, "@punctuation.delimiter.markdown_inline", { fg = theme.yellow1 }) -- delimiters
 hl(0, "@punctuation.bracket.markdown_inline", { fg = theme.yellow1 }) -- brackets
