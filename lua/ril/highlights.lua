@@ -114,7 +114,7 @@ hl(0, "RainbowDelimiterViolet", { fg = theme.purple1 })
 
 ----------------------------- Headlines
 hl(0, "Dash",          { fg = theme.bg3 })
-hl(0, "Quote",         { bold = true, fg = theme.gray_0, bg = theme.gray_0 })
+-- hl(0, "Quote",         { bold = true, fg = theme.gray_0, bg = theme.gray_0 })
 hl(0, "HeadlinePlain", { bold = true, fg = theme.fg })
 hl(0, "Headline",      { bold = true, fg = theme.fg, bg = theme.bg3 })
 hl(0, "Headline1",     { bold = true, fg = theme.fg_0, bg = theme.blueB })
