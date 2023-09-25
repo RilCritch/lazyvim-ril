@@ -129,6 +129,8 @@ hl(0, "Todo", { fg = theme.bg0, bg = theme.blue1, bold = true })
 
 ----------------------------- Markdown
 hl(0, "@text.title.markdown", { fg = theme.purple1, bold = true }) -- table title
+hl(0, "@text.todo.unchecked.markdown", { fg = theme.bg0, bg = theme.blue1, bold = true }) -- unchecked todo
+hl(0, "@text.todo.checked.markdown", { fg = theme.bg0, bg = theme.cyan1, bold = true }) -- checked todo
 hl(0, "@text.strong.markdown_inline", { fg = theme.purpleL, bold = true }) -- bold
 hl(0, "@text.emphasis.markdown_inline", { fg = theme.cyanL, italic = true }) -- italic
 hl(0, "@text.reference.markdown_inline", { fg = theme.cyan1, underline = true }) -- link
