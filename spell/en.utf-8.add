@@ -25,3 +25,5 @@ config
 autocmds
 keymaps
 nvim
+Covid
+covid
