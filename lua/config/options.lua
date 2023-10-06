@@ -9,6 +9,7 @@ vim.g.maplocalleader = ","
 local opt = vim.opt
 
 opt.autowrite = true -- Enable auto write
+opt.breakindent = true -- preserve indentation with line wrapping
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
 opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 3 -- Hide * markup for bold and italic
@@ -22,6 +23,7 @@ opt.grepprg = "rg --vimgrep"
 opt.ignorecase = true -- Ignore case
 opt.inccommand = "nosplit" -- preview incremental substitute
 opt.laststatus = 0
+opt.linebreak = true -- word wrapping maintains full words
 opt.list = true -- Show some invisible characters (tabs...
 -- opt.listchars:append("trail:█")
 opt.listchars:append("trail:-")
