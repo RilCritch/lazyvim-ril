@@ -39,12 +39,17 @@ map("n", "<leader>wo", "<C-W>o", { desc = "Close all other windows", remap = tru
 
 -- notes/documents
 map("n", "<leader>mc", "<cmd>MdEval<cr>", { desc = "Run code block", silent = true, noremap = true })
-map("n", "<leader>nn", "<cmd>Neorg workspace notes<cr>", { desc = "Notes", silent = true, noremap = true })
 
 -- oil file manager
-map("n", "<leader>e", function() -- toggle oil
+map("n", "<leader>ee", function() -- toggle oil floating
+  require("oil").open(nil)
+end, { desc = "Open oil", silent = true })
+map("n", "<leader>ec", function() -- toggle oil floating
+  require("oil").close()
+end, { desc = "Close oil", silent = true })
+map("n", "<leader>ef", function() -- toggle oil floating
   require("oil").toggle_float(nil)
-end, { desc = "Toggle oil", silent = true })
+end, { desc = "Toggle oil floating", silent = true })
 
 -- vim control
 map("n", "<leader>vc", "<cmd>qa<cr>", { desc = "Quit all" })

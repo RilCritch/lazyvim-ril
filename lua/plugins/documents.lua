@@ -81,7 +81,7 @@ return {
             "Headline5",
             "Headline6",
           },
-          codeblock_highlight = "CodeBlock",
+          codeblock_highlight = "",
           dash_highlight = "Dash",
           dash_string = "",
           -- quote_highlight = "Quote",

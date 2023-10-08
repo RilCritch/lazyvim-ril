@@ -78,7 +78,7 @@ return {
       float = {
         -- Padding around the floating window
         padding = 10,
-        margin = 20,
+        margin = 10,
         max_width = 0,
         max_height = 0,
         border = "rounded",
