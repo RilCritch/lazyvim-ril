@@ -5,6 +5,7 @@
 -- This file is automatically loaded by plugins.core
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
+vim.g.autoformat = false -- globally disable auto format
 
 local opt = vim.opt
 

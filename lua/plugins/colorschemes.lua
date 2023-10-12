@@ -20,12 +20,27 @@ return {
   --     },
   --   },
   -- },
+
+  -- {
+  --   "ellisonleao/gruvbox.nvim",
+  --   -- priority = 1000,
+  --   opts = {
+  --     transparent_mode = true,
+  --   },
+  -- },
+
   {
-    "ellisonleao/gruvbox.nvim",
-    -- priority = 1000,
-    opts = {
-      transparent_mode = true,
-    },
+    "neanias/everforest-nvim",
+    version = false,
+    lazy = false,
+    priority = 1000, -- make sure to load this before all the other start plugins
+    -- Optional; default configuration will be used if setup isn't called.
+    config = function()
+      require("everforest").setup({
+        -- Your config here
+        background = "hard",
+      })
+    end,
   },
 
   -- Configure LazyVim to load gruvbox
@@ -35,7 +50,8 @@ return {
       -- colorscheme = "tokyonight",
       -- colorscheme = "nordic",
       -- colorscheme = "catppuccin",
-      colorscheme = "gruvbox",
+      -- colorscheme = "gruvbox",
+      colorscheme = "everforest",
     },
   },
 }
