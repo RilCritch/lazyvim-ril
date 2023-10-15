@@ -2,4 +2,4 @@
 require("config.lazy")
 
 -- setting custom highlights
--- require("ril.highlights")
+require("ril.highlights")
