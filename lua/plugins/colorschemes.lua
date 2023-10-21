@@ -39,6 +39,10 @@ return {
       require("everforest").setup({
         -- Your config here
         -- background = "hard",
+        colours_override = function(palette)
+          palette.bg_dim = "#2D353B"
+          palette.bg0    = "#232A2E"
+        end,
       })
     end,
   },
