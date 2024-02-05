@@ -82,7 +82,8 @@ local gruvbox = {
 local everforest = {
   ----------------------------- Background
   bg0  = "#1E2326", -- bg dark
-  bg   = "#272E33", -- bg main
+  bg   = "#232A2E", -- bg main
+  bgA  = "#2D353B", -- bg main alt
   bg1  = "#2E383C", -- bg alt 1
   bg2  = "#374145", -- bg alt 2
   bg3  = "#414B50", -- bg alt 3
@@ -173,7 +174,7 @@ require("todo-comments").setup {
   }
 }
 
------------------------------ Modicator
+----------------------------- Modicator {{{
 -- default cursor number
 --[[
 hl(0, "CursorLineNr", { fg = theme.fg2 })
@@ -190,21 +191,21 @@ hl(0, "SelectMode",         { fg = theme.fg2 })
 hl(0, "TerminalMode",       { fg = theme.fg2 })
 hl(0, "TerminalNormalMode", { fg = theme.fg2 })
 --]]
+-- }}}
 
 ----------------------------- Nvim
---[[
-hl(0, "CursorLine", { bg = theme.bg1 })
---]]
+hl(0, "CursorLine", { bg = theme.bgA, sp = theme. bg2 ,underline = true })
 
------------------------------ Lualine
+----------------------------- Lualine {{{
 --[[
-local lualine_theme = require('ril.lauline.gruvbox_ril')
+local lualine_theme = require('theme.lualine.gruvbox_ril')
 require('lualine').setup {
   options = { theme = lualine_theme },
 }
 --]]
+-- }}}
 
------------------------------ Rainbow Delimiters
+----------------------------- Rainbow Delimiters {{{
 --[[
 hl(0, "RainbowDelimiterOrange", { fg = theme.orange1 })
 hl(0, "RainbowDelimiterBlue", { fg = theme.blue1 })
@@ -212,6 +213,7 @@ hl(0, "RainbowDelimiterYellow", { fg = theme.yellow1 })
 hl(0, "RainbowDelimiterCyan", { fg = theme.cyan1 })
 hl(0, "RainbowDelimiterViolet", { fg = theme.purple1 })
 --]]
+-- }}}
 
 ----------------------------- Headlines
 hl(0, "Dash",          { fg = theme.bg3 })
@@ -224,31 +226,30 @@ hl(0, "Headline4",     { bold = true, fg = theme.cyan })
 hl(0, "Headline5",     { bold = true, fg = theme.blue })
 hl(0, "Headline6",     { bold = true, fg = theme.cyan })
 
-
 ----------------------------- Markdown
---[[
-hl(0, "@text.title.markdown", { fg = theme.purple1, bold = true }) -- table title
-hl(0, "@text.todo.unchecked.markdown", { fg = theme.bg0, bg = theme.blue1, bold = true }) -- unchecked todo
-hl(0, "@text.todo.checked.markdown", { fg = theme.bg0, bg = theme.cyan1, bold = true }) -- checked todo
-hl(0, "@text.strong.markdown_inline", { fg = theme.purpleL, bold = true }) -- bold
-hl(0, "@text.emphasis.markdown_inline", { fg = theme.cyanL, italic = true }) -- italic
-hl(0, "@text.reference.markdown_inline", { fg = theme.cyan1, underline = true }) -- link
-hl(0, "@punctuation.delimiter.markdown_inline", { fg = theme.yellow1 }) -- delimiters
-hl(0, "@punctuation.bracket.markdown_inline", { fg = theme.yellow1 }) -- brackets
-hl(0, "@punctuation.special.markdown", { fg = theme.blue1, bold = true }) -- list chars, table borders, HR
---]]
+hl(0, "@markup.list.markdown", { fg = theme.gray1 })  -- Task Checked
 
------------------------------ Noice
+hl(0, "@markup.list.unchecked.markdown", { fg = theme.bg,   bg = theme.blue })       -- Task Unchecked
+hl(0, "@markup.list.checked.markdown",   { fg = theme.cyan, strikethrough = true })  -- Task Checked
+
+hl(0, "@punctuation.special.markdown", { fg = theme.gray1 })              -- Block Quote Bar
+hl(0, "@markup.quote.markdown",        { fg = theme.fg, bg = theme.bg2 }) -- Block Quote Text
+
+hl(0, "@markup.italic.markdown_inline", { italic = true }) -- Italic
+hl(0, "@markup.strong.markdown_inline", { bold = true })   -- Bold
+
+hl(0, "@markup.link.label.markdown_inline", { fg = theme.cyan, underline = true }) -- Link Title
+
+----------------------------- Noice {{{
 --[[
 hl(0, "NoiceMini", { bg = theme.bg3 })
 --]]
+-- }}}
 
 ----------------------------- Vim Illuminate
---[[
-hl(0, "IlluminatedWordText",  { bold = true, bg = theme.bg3 })
-hl(0, "IlluminatedWordRead",  { bold = true, fg = theme.cyan1, bg = theme.bg3 })
-hl(0, "IlluminatedWordWrite", { bold = true, fg = theme.yellow1, bg = theme.bg3 })
--]]
+hl(0, "IlluminatedWordText",  { bold = true, bg = theme.bg2 }) -- Reference with out special info
+hl(0, "IlluminatedWordRead",  { bold = true, bg = theme.bg2, italic = true }) -- Reference denoting access
+hl(0, "IlluminatedWordWrite", { bold = true, bg = theme.bg2, fg = theme.blue }) -- Reference denoting assignment
 
 ----------------------------- nvim-web-devicons
 --[[

@@ -3,25 +3,32 @@ return {
         "nvim-neo-tree/neo-tree.nvim",
         init = function() end, -- disabling neo-tree when nvim is called on directories
         keys = function() -- overiding <leader>e and <leader>E
-        return {
-            {
-            "<leader>fe",
-            function()
-                require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").get_root() })
-            end,
-            desc = "Explorer NeoTree (root dir)",
-            },
-            {
-            "<leader>fE",
-            function()
-                require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
-            end,
-            desc = "Explorer NeoTree (cwd)",
-            },
-        }
+            return {
+                {
+                "<leader>fe",
+                function()
+                    require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").get_root() })
+                end,
+                desc = "Explorer NeoTree (root dir)",
+                },
+                {
+                "<leader>fE",
+                function()
+                    require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
+                end,
+                desc = "Explorer NeoTree (cwd)",
+                },
+            }
         end,
         opts = {},
     },
+
+    -- {
+    --     "folke/which-key.nvim",
+    --     opts = {
+    --
+    --     }
+    -- },
 
     {
         "akinsho/bufferline.nvim",

@@ -4,54 +4,37 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- This file is automatically loaded by lazyvim.config.init
+local map = vim.keymap.set
+local del = vim.keymap.del
 
--- This code at the top was found at the link above
--- local Util = require("lazyvim.util")
-
-local function map(mode, lhs, rhs, opts)
-  local keys = require("lazy.core.handler").handlers.keys
-  ---@cast keys LazyKeysHandler
-  -- do not create the keymap if a lazy keys handler exists
-  if not keys.active[keys.parse({ lhs, mode = mode }).id] then
-    opts = opts or {}
-    opts.silent = opts.silent ~= false
-    if opts.remap and not vim.g.vscode then
-      opts.remap = nil
-    end
-    vim.keymap.set(mode, lhs, rhs, opts)
-  end
-end
-
---  overrides
-map("n", ",", "")
-map("n", "<leader>qq", "")
+-- overrides
+del('n', '<leader>qq')
 
 -- utility
-map("n", ";", ":", { desc = "Quick command mode" })
+map('n', ';', ':', { desc = 'Quick command mode' })
 
 -- colorizer
-map("n", "<leader>cc", "<cmd>ColorizerToggle<cr>", { desc = "Toggle color highlighting" })
-map("n", "<leader>ce", "<cmd>ColorizerAttachToBuffer<cr>", { desc = "Enable color highlighting" })
+map('n', '<leader>cc', '<cmd>ColorizerToggle<cr>', { desc = 'Toggle color highlighting' })
+map('n', '<leader>ce', '<cmd>ColorizerAttachToBuffer<cr>', { desc = 'Enable color highlighting' })
 
 -- windows
-map("n", "<leader>wo", "<C-W>o", { desc = "Close all other windows", remap = true })
+map('n', '<leader>wo', '<C-W>o', { desc = 'Close all other windows', remap = true })
 
 -- notes/documents
-map("n", "<leader>mc", "<cmd>MdEval<cr>", { desc = "Run code block", silent = true, noremap = true })
+map('n', '<leader>mc', '<cmd>MdEval<cr>', { desc = 'Run code block', silent = true, noremap = true })
 
 -- oil file manager
-map("n", "<leader>ee", function() -- toggle oil floating
-  require("oil").open(nil)
-end, { desc = "Open oil", silent = true })
-map("n", "<leader>ec", function() -- toggle oil floating
-  require("oil").close()
-end, { desc = "Close oil", silent = true })
-map("n", "<leader>ef", function() -- toggle oil floating
-  require("oil").toggle_float(nil)
-end, { desc = "Toggle oil floating", silent = true })
+map('n', '<leader>ee', function() -- toggle oil floating
+  require('oil').open(nil)
+end, { desc = 'Open oil', silent = true })
+map('n', '<leader>ec', function() -- toggle oil floating
+  require('oil').close()
+end, { desc = 'Close oil', silent = true })
+map('n', '<leader>ef', function() -- toggle oil floating
+  require('oil').toggle_float(nil)
+end, { desc = 'Toggle oil floating', silent = true })
 
 -- vim control
-map("n", "<leader>vc", "<cmd>qa<cr>", { desc = "Quit all" })
-map("n", "<leader>vs", "<cmd>w<cr><esc>", { desc = "Save file" })
+map('n', '<leader>vc', '<cmd>qa<cr>', { desc = 'Quit all' })
+map('n', '<leader>vs', '<cmd>w<cr><esc>', { desc = 'Save file' })
 -- look into making keybinding for wq

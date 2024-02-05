@@ -3,5 +3,15 @@
 -- Add any additional autocmds here
 -- utility
 local function augroup(name)
-  return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
+  return vim.api.nvim_create_augroup("rc_" .. name, { clear = true })
 end
+
+--[[ Filetype Autocommands ]]
+
+-- Markdown Local Keymaps
+-- vim.api.nvim_create_autocmd("Filetype", {
+--     group   = augroup("markdown"),
+--     pattern = "markdown"
+--     callback = function ()
+--     end
+-- })

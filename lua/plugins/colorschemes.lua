@@ -40,7 +40,7 @@ return {
         -- Your config here
         -- background = "hard",
         colours_override = function(palette)
-          palette.bg_dim = "#2D353B"
+          palette.bg_dim = "#1E2326"
           palette.bg0    = "#232A2E"
         end,
       })
