@@ -24,13 +24,13 @@ map('n', '<leader>wo', '<C-W>o', { desc = 'Close all other windows', remap = tru
 map('n', '<leader>mc', '<cmd>MdEval<cr>', { desc = 'Run code block', silent = true, noremap = true })
 
 -- oil file manager
-map('n', '<leader>ee', function() -- toggle oil floating
+map('n', '<leader>oo', function() -- toggle oil floating
   require('oil').open(nil)
 end, { desc = 'Open oil', silent = true })
-map('n', '<leader>ec', function() -- toggle oil floating
+map('n', '<leader>oc', function() -- toggle oil floating
   require('oil').close()
 end, { desc = 'Close oil', silent = true })
-map('n', '<leader>ef', function() -- toggle oil floating
+map('n', '<leader>e', function() -- toggle oil floating
   require('oil').toggle_float(nil)
 end, { desc = 'Toggle oil floating', silent = true })
 
