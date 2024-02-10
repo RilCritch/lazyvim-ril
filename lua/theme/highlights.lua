@@ -81,6 +81,7 @@ local gruvbox = {
 -- Everforest Theme {{{
 local everforest = {
   ----------------------------- Background
+  bg_0  = "#1a1f22", -- bg dark
   bg0  = "#1E2326", -- bg dark
   bg   = "#232A2E", -- bg main
   bgA  = "#2D353B", -- bg main alt
@@ -194,7 +195,10 @@ hl(0, "TerminalNormalMode", { fg = theme.fg2 })
 -- }}}
 
 ----------------------------- Nvim
-hl(0, "CursorLine", { bg = theme.bgA, sp = theme. bg2 ,underline = true })
+hl(0, "CursorLine", { bg = theme.bgA, sp = theme.bg2 ,underline = true })
+hl(0, "NormalFloat", { fg = theme.fg, bg = theme.bg })
+hl(0, "FloatBorder", { fg = theme.cyan, bg = theme.bg })
+hl(0, "FloatTitle", { fg = theme.blue, bg = theme.bg })
 
 ----------------------------- Lualine {{{
 --[[
@@ -240,6 +244,9 @@ hl(0, "@markup.strong.markdown_inline", { bold = true })   -- Bold
 
 hl(0, "@markup.link.label.markdown_inline", { fg = theme.cyan, underline = true }) -- Link Title
 
+----------------------------- Mini Indent Scope
+hl(0, "MiniIndentscopeSymbol", { fg = theme.blue }) -- Link Title
+
 ----------------------------- Noice {{{
 --[[
 hl(0, "NoiceMini", { bg = theme.bg3 })
@@ -250,6 +257,14 @@ hl(0, "NoiceMini", { bg = theme.bg3 })
 hl(0, "IlluminatedWordText",  { bold = true, bg = theme.bg2 }) -- Reference with out special info
 hl(0, "IlluminatedWordRead",  { bold = true, bg = theme.bg2, italic = true }) -- Reference denoting access
 hl(0, "IlluminatedWordWrite", { bold = true, bg = theme.bg2, fg = theme.blue }) -- Reference denoting assignment
+
+----------------------------- Nvim Neo Tree
+hl(0, "NeoTreeNormal",      { fg = theme.fg, bg = theme.bg })   -- BG For Normal Items
+hl(0, "NeoTreeNormalNC",    { fg = theme.fg, bg = theme.bg })   -- BG Normal Items
+hl(0, "NeoTreeEndOfBuffer", { fg = theme.bg, bg = theme.bg })   -- BG For End of Bugger
+hl(0, "NeoTreeBufferLineTitle", { fg = theme.cyan, bg = theme.bg }) -- Bufferline hls
+hl(0, "BufferlineOffsetSeparator", { fg = theme.bg4, bg = theme.bg })
+
 
 ----------------------------- nvim-web-devicons
 --[[
