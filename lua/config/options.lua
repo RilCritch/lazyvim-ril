@@ -13,11 +13,11 @@ opt.autowrite = true -- Enable auto write
 opt.breakindent = true -- preserve indentation with line wrapping
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
 opt.completeopt = "menu,menuone,noselect"
-opt.conceallevel = 0 -- Hide * markup for bold and italic
+opt.conceallevel = 2 -- Hide * markup for bold and italic
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Enable highlighting of the current line
 opt.expandtab = true -- Use spaces instead of tabs
-opt.foldlevelstart = 99 -- level at which vim will fold when opening buffers
+-- opt.foldlevelstart = 1 -- level at which vim will fold when opening buffers
 opt.formatoptions = "jcroqlnt" -- tcqj
 opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
@@ -63,7 +63,7 @@ if vim.fn.has("nvim-0.9.0") == 1 then
 end
 
 -- Markdown settings
-vim.g.markdown_folding = 1
+vim.g.markdown_folding = 0
 vim.g.markdown_recommended_style = 4
 
 -- This for some reason doesn't work. Where is NormalFloat getting set? 
