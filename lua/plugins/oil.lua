@@ -77,8 +77,8 @@ return {
       -- Configuration for the floating window in oil.open_float
       float = {
         -- Padding around the floating window
-        padding = 10,
-        margin = 10,
+        padding = 4,
+        margin = 0,
         max_width = 0,
         max_height = 0,
         border = "rounded",
@@ -88,6 +88,14 @@ return {
         -- This is the config that will be passed to nvim_open_win.
         -- Change values here to customize the layout
         override = function(conf)
+            -- conf = {
+            --             relative = "win",
+            --             row = 50,
+            --             col = 50,
+            --             width = 100,
+            --             height = 50,
+            --             border = "shadow",
+            --        }
           return conf
         end,
       },
