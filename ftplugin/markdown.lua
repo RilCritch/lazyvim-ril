@@ -15,3 +15,5 @@
 -- map('n', '<LocalLeader>t', function()
 --     insertTextWithCount("- [ ] tsk", vim.v.count1)
 -- end, {silent = true, desc = "Insert Task"})
+
+-- Local vim options
