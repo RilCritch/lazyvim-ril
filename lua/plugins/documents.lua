@@ -1,13 +1,14 @@
--- vim:fileencoding=utf-8:foldmethod=marker
+-- vim:fileencoding=utf-8:foldmethod=marker:
+-- vim: ts=2 sts=2 sw=2 et
 return {
   { -- evaluate code in markdown, orgmode.nvim and norg
     "jubnzv/mdeval.nvim",
   },
 
-  { -- opens links to other md files in a new buffer using the enter key
-    "jghauser/follow-md-links.nvim",
-  },
-
+  -- { -- opens links to other md files in a new buffer using the enter key
+  --   "jghauser/follow-md-links.nvim",
+  -- },
+  --
   { -- make markdown look better
     "lukas-reineke/headlines.nvim",
     dependencies = "nvim-treesitter/nvim-treesitter",
@@ -81,6 +82,15 @@ return {
             "Headline5",
             "Headline6",
           },
+          bullet_highlights = {
+            "MarkerHeadline1",
+            "MarkerHeadline2",
+            "MarkerHeadline3",
+            "MarkerHeadline4",
+            "MarkerHeadline5",
+            "MarkerHeadline6",
+          },
+          bullets = { "◉", "○", "✸", "✿" },
           codeblock_highlight = "",
           dash_highlight = "Dash",
           dash_string = "",
@@ -135,5 +145,4 @@ return {
   --   end,
   -- },
   -- }}}
-
 }

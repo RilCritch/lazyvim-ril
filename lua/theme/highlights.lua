@@ -220,15 +220,21 @@ hl(0, "RainbowDelimiterViolet", { fg = theme.purple1 })
 -- }}}
 
 ----------------------------- Headlines
-hl(0, "Dash",          { fg = theme.bg3 })
-hl(0, "HeadlinePlain", { bold = true, fg = theme.fg })
-hl(0, "Headline",      { bold = true, fg = theme.fg })
-hl(0, "Headline1",     { bold = true, fg = theme.bg0, bg = theme.cyan })
-hl(0, "Headline2",     { bold = true, fg = theme.cyan, bg = theme.bg2 })
-hl(0, "Headline3",     { bold = true, fg = theme.blue })
-hl(0, "Headline4",     { bold = true, fg = theme.cyan })
-hl(0, "Headline5",     { bold = true, fg = theme.blue })
-hl(0, "Headline6",     { bold = true, fg = theme.cyan })
+hl(0, "Dash",                { fg = theme.bg3 })
+hl(0, "HeadlinePlain",       { bold = true, fg = theme.fg })
+hl(0, "Headline",            { bold = true, fg = theme.fg })
+hl(0, "Headline1",           { bold = true, fg = theme.bg0, bg = theme.cyan })
+hl(0, "Headline2",           { bold = true, fg = theme.cyan, bg = theme.bg2 })
+hl(0, "Headline3",           { bold = true, fg = theme.blue })
+hl(0, "Headline4",           { bold = true, fg = theme.cyan })
+hl(0, "Headline5",           { bold = true, fg = theme.blue })
+hl(0, "Headline6",           { bold = true, fg = theme.cyan })
+hl(0, "MarkerHeadline1",     { bold = true, fg = theme.bg0, bg = theme.cyan })
+hl(0, "MarkerHeadline2",     { bold = true, fg = theme.cyan, bg = theme.bg2 })
+hl(0, "MarkerHeadline3",     { bold = true, fg = theme.blue })
+hl(0, "MarkerHeadline4",     { bold = true, fg = theme.cyan })
+hl(0, "MarkerHeadline5",     { bold = true, fg = theme.blue })
+hl(0, "MarkerHeadline6",     { bold = true, fg = theme.cyan })
 
 ----------------------------- Markdown
 hl(0, "@markup.list.markdown", { fg = theme.gray1 })  -- Task Checked
@@ -265,6 +271,12 @@ hl(0, "NeoTreeEndOfBuffer", { fg = theme.bg, bg = theme.bg })   -- BG For End of
 hl(0, "NeoTreeBufferLineTitle", { fg = theme.cyan, bg = theme.bg }) -- Bufferline hls
 hl(0, "BufferlineOffsetSeparator", { fg = theme.bg4, bg = theme.bg })
 
+----------------------------- Dashboard
+hl(0, "DashboardHeader", { fg = theme.cyan })
+hl(0, "DashboardFooter", { fg = theme.gray })
+hl(0, "DashboardDescription", { fg = theme.orange })
+hl(0, "DashboardKey", { fg = theme.blue })
+hl(0, "DashboardIcon", { fg = theme.blue })
 
 ----------------------------- nvim-web-devicons
 --[[
