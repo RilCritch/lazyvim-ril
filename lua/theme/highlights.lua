@@ -224,8 +224,8 @@ hl(0, "Dash",                { fg = theme.bg3 })
 hl(0, "HeadlinePlain",       { bold = true, fg = theme.fg })
 hl(0, "Headline",            { bold = true, fg = theme.fg })
 hl(0, "Headline1",           { bold = true, fg = theme.bg0, bg = theme.cyan })
-hl(0, "Headline2",           { bold = true, fg = theme.cyan, bg = theme.bg2 })
-hl(0, "Headline3",           { bold = true, fg = theme.blue })
+hl(0, "Headline2",           { bold = true, fg = theme.cyan, bg = theme.bg3 })
+hl(0, "Headline3",           { bold = true, fg = theme.blue, bg= theme.bg2 })
 hl(0, "Headline4",           { bold = true, fg = theme.cyan })
 hl(0, "Headline5",           { bold = true, fg = theme.blue })
 hl(0, "Headline6",           { bold = true, fg = theme.cyan })
@@ -246,7 +246,7 @@ hl(0, "@punctuation.special.markdown", { fg = theme.gray1 })              -- Blo
 hl(0, "@markup.quote.markdown",        { fg = theme.fg, bg = theme.bg2 }) -- Block Quote Text
 
 hl(0, "@markup.italic.markdown_inline", { italic = true }) -- Italic
-hl(0, "@markup.strong.markdown_inline", { bold = true })   -- Bold
+hl(0, "@markup.strong.markdown_inline", { bold = true, fg = theme.blue })   -- Bold
 
 hl(0, "@markup.link.label.markdown_inline", { fg = theme.cyan, underline = true }) -- Link Title
 
