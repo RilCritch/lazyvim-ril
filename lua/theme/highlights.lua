@@ -223,30 +223,36 @@ hl(0, "RainbowDelimiterViolet", { fg = theme.purple1 })
 hl(0, "Dash",                { fg = theme.bg3 })
 hl(0, "HeadlinePlain",       { bold = true, fg = theme.fg })
 hl(0, "Headline",            { bold = true, fg = theme.fg })
+
 hl(0, "Headline1",           { bold = true, fg = theme.bg0, bg = theme.cyan })
-hl(0, "Headline2",           { bold = true, fg = theme.cyan, bg = theme.bg3 })
-hl(0, "Headline3",           { bold = true, fg = theme.blue, bg= theme.bg2 })
-hl(0, "Headline4",           { bold = true, fg = theme.cyan })
-hl(0, "Headline5",           { bold = true, fg = theme.blue })
-hl(0, "Headline6",           { bold = true, fg = theme.cyan })
 hl(0, "MarkerHeadline1",     { bold = true, fg = theme.bg0, bg = theme.cyan })
-hl(0, "MarkerHeadline2",     { bold = true, fg = theme.cyan, bg = theme.bg2 })
-hl(0, "MarkerHeadline3",     { bold = true, fg = theme.blue })
-hl(0, "MarkerHeadline4",     { bold = true, fg = theme.cyan })
-hl(0, "MarkerHeadline5",     { bold = true, fg = theme.blue })
-hl(0, "MarkerHeadline6",     { bold = true, fg = theme.cyan })
+
+hl(0, "Headline2",           { bold = true, fg = theme.bg0, bg = theme.blue })
+hl(0, "MarkerHeadline2",     { bold = true, fg = theme.bg0, bg = theme.blue })
+
+hl(0, "Headline3",           { bold = true, fg = theme.cyan, bg= theme.bg2 })
+hl(0, "MarkerHeadline3",     { bold = true, fg = theme.cyan, bg= theme.bg2 })
+
+hl(0, "Headline4",           { bold = true, fg = theme.blue, bg = theme.bg2 })
+hl(0, "MarkerHeadline4",     { bold = true, fg = theme.blue, bg = theme.bg2 })
+
+hl(0, "Headline5",           { bold = true, fg = theme.fg_0 })
+hl(0, "MarkerHeadline5",     { bold = true, fg = theme.fg_0 })
+
+hl(0, "Headline6",           { bold = true, fg = theme.fg })
+hl(0, "MarkerHeadline6",     { bold = true, fg = theme.fg })
 
 ----------------------------- Markdown
 hl(0, "@markup.list.markdown", { fg = theme.gray1 })  -- Task Checked
 
-hl(0, "@markup.list.unchecked.markdown", { fg = theme.bg,   bg = theme.blue })       -- Task Unchecked
-hl(0, "@markup.list.checked.markdown",   { fg = theme.cyan, strikethrough = true })  -- Task Checked
+hl(0, "@markup.list.unchecked.markdown", { fg = theme.bg, bg = theme.cyan })       -- Task Unchecked
+hl(0, "@markup.list.checked.markdown",   { fg = theme.bg, bg = theme.gray0 })  -- Task Checked
 
-hl(0, "@punctuation.special.markdown", { fg = theme.gray1 })              -- Block Quote Bar
+hl(0, "@punctuation.special.markdown", { fg = theme.gray1, })              -- Block Quote Bar
 hl(0, "@markup.quote.markdown",        { fg = theme.fg, bg = theme.bg2 }) -- Block Quote Text
 
-hl(0, "@markup.italic.markdown_inline", { italic = true }) -- Italic
-hl(0, "@markup.strong.markdown_inline", { bold = true, fg = theme.blue })   -- Bold
+hl(0, "@markup.strong.markdown_inline", { bold = true, fg = theme.yellow })   -- Bold
+hl(0, "@markup.italic.markdown_inline", { italic = true, fg = theme.blue }) -- Italic
 
 hl(0, "@markup.link.label.markdown_inline", { fg = theme.cyan, underline = true }) -- Link Title
 
