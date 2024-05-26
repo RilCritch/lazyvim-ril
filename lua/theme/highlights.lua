@@ -253,6 +253,7 @@ hl(0, "@markup.quote.markdown",        { fg = theme.fg, bg = theme.bg2 }) -- Blo
 
 hl(0, "@markup.strong.markdown_inline", { bold = true, fg = theme.yellow })   -- Bold
 hl(0, "@markup.italic.markdown_inline", { italic = true, fg = theme.blue }) -- Italic
+hl(0, "@markup.strikethrough.markdown_inline", { strikethrough= true, fg = theme.gray1 }) -- strike
 
 hl(0, "@markup.link.label.markdown_inline", { fg = theme.cyan, underline = true }) -- Link Title
 

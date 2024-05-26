@@ -11,7 +11,7 @@ local del = vim.keymap.del
 del('n', '<leader>qq')
 
 -- utility
-map('n', ';', ':', { desc = 'Quick command mode' })
+-- map('n', ';', ':', { desc = 'Quick command mode' })
 
 -- colorizer
 map('n', '<leader>cc', '<cmd>ColorizerToggle<cr>', { desc = 'Toggle color highlighting' })

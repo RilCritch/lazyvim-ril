@@ -5,10 +5,10 @@ return {
     "jubnzv/mdeval.nvim",
   },
 
-  -- { -- opens links to other md files in a new buffer using the enter key
-  --   "jghauser/follow-md-links.nvim",
-  -- },
-  --
+  { -- opens links to other md files in a new buffer using the enter key
+    "jghauser/follow-md-links.nvim",
+  },
+
   { -- make markdown look better
     "lukas-reineke/headlines.nvim",
     dependencies = "nvim-treesitter/nvim-treesitter",
