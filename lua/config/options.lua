@@ -72,16 +72,17 @@ if vim.fn.has("nvim-0.10") == 1 then
 end
 
 -- Folding
-vim.opt.foldlevel = 0
-vim.opt.foldtext = "v:lua.require'lazyvim.util'.ui.foldtext()"
+vim.opt.foldlevelstart  = 99
+vim.opt.foldtext   = "v:lua.require'lazyvim.util'.ui.foldtext()"
+vim.opt.foldmethod ="marker"
 
 -- HACK: causes freezes on <= 0.9, so only enable on >= 0.10 for now
-if vim.fn.has("nvim-0.10") == 1 then
-  vim.opt.foldmethod = "expr"
-  vim.opt.foldexpr = "v:lua.require'lazyvim.util'.ui.foldexpr()"
-else
-  vim.opt.foldmethod = "marker"
-end
+-- if vim.fn.has("nvim-0.10") == 1 then
+--   vim.opt.foldmethod = "expr"
+--   vim.opt.foldexpr = "v:lua.require'lazyvim.util'.ui.foldexpr()"
+-- else
+--   vim.opt.foldmethod = "marker"
+-- end
 
 -- Markdown settings
 -- vim.g.markdown_folding = 1
