@@ -9,6 +9,12 @@ local del = vim.keymap.del
 
 -- overrides
 del('n', '<leader>qq')
+del('n', 's')
+
+-- flash
+map ('n', 'f', function()
+    require("flash").jump()
+end, { desc = 'Flash' })
 
 -- utility
 -- map('n', ';', ':', { desc = 'Quick command mode' })

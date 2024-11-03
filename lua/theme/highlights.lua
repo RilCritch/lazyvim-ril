@@ -83,7 +83,7 @@ local everforest = {
   ----------------------------- Background
   bg_0  = "#1a1f22", -- bg dark
   bg0  = "#1E2326", -- bg dark
-  bg   = "#232A2E", -- bg main
+  bg   = "#161A1D", -- bg main
   bgA  = "#2D353B", -- bg main alt
   bg1  = "#2E383C", -- bg alt 1
   bg2  = "#374145", -- bg alt 2
